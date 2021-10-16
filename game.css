@@ -1,0 +1,94 @@
+/**
+* Author: Valentina Costarelli
+* 
+* This CSS page styles the game page html for the "Travel Memory" game!
+* Styling for a background image and consistent travel theme is
+* executed in this document. Game card layout and card flip are
+* handled, as well as the proper styling and layout for the
+* menu bar containing important aspects of the game as it's played.
+*/
+
+/* IMPORTANT NOTE: the "*" needs to be there
+otherwise layout of cards will not be correct */
+html * { 
+    /* from https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: #ccbba8db;
+    height: 110vh;
+}
+
+#menu, #memory-game {
+    display: flex;
+    align-items: center;
+}
+
+#menu {
+    justify-content: space-evenly;
+    padding: 5px;
+    background-color: #f5e3cedb;
+    border-bottom: 2px solid gray;
+    font-size: 16pt;
+}
+
+#menu, button, select {
+    color: #4e3737;
+}
+
+button, select {
+    font-family: 'Montserrat', sans-serif;
+    padding: 6px;
+    font-size: 14pt;
+    background-color: #c1b6b659;
+    border: 2px solid gray;
+    border-radius: 0.3em;
+}
+
+#memory-game {
+    padding-top: 2%;
+    width: 85vw;
+    height: 75vh;
+    margin: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card, .front, .back {
+    border-radius: 6px;
+}
+
+.memory-card {
+    margin: 5px;
+    position: relative;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+    transition: all .5s;
+    transform-style: preserve-3d;
+    transform: scale(1);
+}
+
+.memory-card.flip, .front {
+    transform: rotateY(180deg);
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    position: absolute;
+    backface-visibility: hidden;
+    background: white;
+}

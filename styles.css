@@ -1,0 +1,79 @@
+/**
+* Author: Valentina Costarelli
+* 
+* This CSS page styles the html for the "Travel Memory" game!
+* Styling for a background image and consistent travel theme is
+* executed in this document.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+/* Title: */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+
+
+html {
+    height: 110vh;
+    font-family: 'Montserrat', sans-serif;
+
+    background-image: url("home-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 50px;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    color: #463d3a;
+}
+
+h2 {
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #f5e3cedb;
+    width: 70%;
+    padding: 13px;
+    border-radius: 0.3em;
+}
+
+main, p {
+    margin: auto;
+}
+
+main, button, select {
+    border-radius: 0.3em;
+    border: 2px solid gray;
+}
+
+body, button, select {
+    text-align: center;
+}
+
+h2, button, select {
+    color: #4e3737;
+}
+
+button, select {
+    padding: 6px;
+    font-size: 15pt;
+    background-color: #c1b6b659;
+}
+
+#play {
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+p {
+    width: 530px;
+    font-size: 14pt;
+    font-style: italic;
+}
